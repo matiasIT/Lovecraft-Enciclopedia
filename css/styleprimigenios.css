@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background: black;
+  width: 100%;
+  height: 100vh;
+}
+
+#center {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  height: 300px;
+  margin: 35px auto 0px auto;
+  align-items: center;
+  transform-style: preserve-3d;
+  font-size: 12px;
+}
+
+.card .card-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s ease-in-out;
+  backface-visibility: hidden;
+  transform: perspective(-500px) rotateY(0deg);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: perspective(500px) rotateY(0deg);
+  -moz-transform: perspective(500px) rotateY(0deg);
+  -ms-transform: perspective(500px) rotateY(0deg);
+  -o-transform: perspective(500px) rotateY(0deg);
+}
+
+.card .card-body.front img {
+  background-size: contain;
+}
+
+.card .card-body.front .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card:hover .card-body.front {
+  transform: perspective(1000px) rotateY(-180deg);
+  -webkit-transform: perspective(1000px) rotateY(-180deg);
+  -moz-transform: perspective(1000px) rotateY(-180deg);
+  -ms-transform: perspective(1000px) rotateY(-180deg);
+  -o-transform: perspective(1000px) rotateY(-180deg);
+}
+
+.card .card-body.back {
+  background-image: url(../img/Cartas/reverso/depositphotos_16800109-stock-photo-glowing-paper.jpg);
+  background-size: cover;
+  transform: perspective(1000px) rotateY(-180deg);
+  -webkit-transform: perspective(1000px) rotateY(-180deg);
+  -moz-transform: perspective(1000px) rotateY(-180deg);
+  -ms-transform: perspective(1000px) rotateY(-180deg);
+  -o-transform: perspective(1000px) rotateY(-180deg);
+}
+
+.card-body.back p {
+  top: 0;
+  left: 0;
+  color: rgb(7, 48, 7);
+}
+
+.card:hover .card-body.back {
+  transform: perspective(500px) rotateY(-360deg);
+  -webkit-transform: perspective(500px) rotateY(-360deg);
+  -moz-transform: perspective(500px) rotateY(-360deg);
+  -ms-transform: perspective(500px) rotateY(-360deg);
+  -o-transform: perspective(500px) rotateY(-360deg);
+}
+
+.card .card-body.back .content p {
+  top: 0;
+  position: absolute;
+}
+
+.card .card-body.back .content a {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.button {
+  background-color: rgb(173, 89, 39);
+  color: rgb(153, 141, 141);
+  font-style: none;
+  margin-bottom: 4px;
+}
+
+#banner {
+  width: 100%;
+  height: 16em;
+  padding: 0;
+}
+
+.section_title {
+  color: rgb(117, 18, 18);
+  text-align: center;
+  margin: 2.1875em 1.6em 2.1875em 1.6em;
+  background-color: rgb(11, 11, 71);
+  border-style: groove;
+  border: 5px solid rgb(117, 18, 18);
+}
+
+.article {
+  background-image: url(../img/Cartas/reverso/depositphotos_16800109-stock-photo-glowing-paper.jpg);
+  background-size: cover;
+  width: 50%;
+  margin: 1.25em auto;
+  border-radius: 10px;
+  border: 4px double black;
+}
+
+.article_title {
+  color: black;
+  text-align: center;
+}
+
+.article_content {
+  color: rgb(7, 48, 7);
+}
+
+h3 {
+  color: black;
+}
+
+h4 {
+  color: black;
+}
